@@ -1,0 +1,68 @@
+@import 'color.sass'
+
+$width: 100px
+
+.Sidebar
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-width: $width
+    min-height: 100vh
+    color: $text-color-dark
+    overflow: hidden
+
+.Logo
+    width: 44px
+    margin: 20px 0 20px 0
+
+.SidebarContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex: 1
+    width: 100%
+    border-radius: 0 40px 40px 0
+    background-color: $secondary-color
+
+.SidebarTop
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-evenly
+    flex: 1
+    *
+        height: 40px
+        width: auto
+
+.SidebarBottom
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-evenly
+    flex: 1
+    *
+        height: 40px
+        width: auto
+
+.IconContainer
+    display: flex
+    align-items: center
+    color: $text-color-dark
+    .SelectionLine
+        display: none
+
+.IconSelected
+    color: $accent-color !important
+    .SelectionLine
+        display: flex
+
+.SelectionLine
+    background-color: $accent-color
+    width: 2px
+    height: 8%
+    position: absolute
+    flex: 1
+    left: $width - 1
+
+.Placeholder
+    height: 0

@@ -1,0 +1,69 @@
+@import 'color.sass'
+    
+.Header
+    display: flex
+    justify-content: space-between
+
+.Search
+    display: flex
+    align-items: center
+    border-radius: 15px 15px 15px 15px
+    background-color: $secondary-color
+    width: 360px
+    height: 65px
+
+.SearchIcon
+    margin-left: 14px
+    width: 35px
+    height: auto
+
+.TextField   
+    margin-left: 12px
+    width: 70%
+    border: none
+    outline: none
+    color: $text-color-light !important
+    font-size: 14pt
+    font-weight: 100
+    background-color: transparent
+    caret-color: $text-color-dark
+    
+::placeholder
+    color: $text-color-dark !important
+
+.Profile
+    display: flex
+    align-items: center
+    max-width: 240px
+
+.ProfilePic
+    width: 60px
+    height: 60px
+    object-fit: cover
+    border-radius: 50px 50px 50px 50px
+
+.ProfileInfo
+    display: flex
+    flex-direction: column
+    margin-left: 15px
+    overflow: hidden
+
+.ProfileHeader
+    display: flex
+    color: $text-color-light
+    cursor: pointer
+
+.ProfileName
+    font-size: 14pt
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+.ProfileMenuIcon
+    min-width: 24px
+    height: auto
+
+.ProfileEmail
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
