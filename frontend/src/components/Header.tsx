@@ -40,7 +40,7 @@ class Profile extends Component {
                         <div className={Style.ProfileName}>Vobe User</div>
                         <Icon className={Style.ProfileMenuIcon} icon={bxChevronDown} />
                     </Link>
-                    <div className={Style.ProfileEmail}>user@vobe.io</div>
+                    <div className={Style.ProfileEmail}>user_test@vobe.io</div>
                 </div>
             </div>
         );
