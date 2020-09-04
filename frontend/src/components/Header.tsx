@@ -37,10 +37,10 @@ class Profile extends Component {
                 <img className={Style.ProfilePic} alt="ProfilePicture" src={profilePic} />
                 <div className={Style.ProfileInfo}>
                     <Link to="/profile" className={Style.ProfileHeader}>
-                        <div className={Style.ProfileName}>Timo Aeckerle</div>
+                        <div className={Style.ProfileName}>Vobe User</div>
                         <Icon className={Style.ProfileMenuIcon} icon={bxChevronDown} />
                     </Link>
-                    <div className={Style.ProfileEmail}>timo@vobe.io</div>
+                    <div className={Style.ProfileEmail}>user@vobe.io</div>
                 </div>
             </div>
         );
