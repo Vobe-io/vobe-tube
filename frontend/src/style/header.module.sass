@@ -1,8 +1,10 @@
 @import 'color.sass'
+$search-height: 55px
     
 .Header
     display: flex
     justify-content: space-between
+    padding-bottom: 20px
 
 .Search
     display: flex
@@ -10,7 +12,7 @@
     border-radius: 15px 15px 15px 15px
     background-color: $secondary-color
     width: 360px
-    height: 65px
+    height: $search-height
 
 .SearchIcon
     margin-left: 14px
@@ -46,7 +48,6 @@
     display: flex
     flex-direction: column
     margin-left: 15px
-    overflow: hidden
 
 .ProfileHeader
     display: flex

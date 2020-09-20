@@ -6,22 +6,32 @@ import { api } from 'App';
 import { commonFetch } from 'scripts/APIService';
 
 type HealthResponse = {
-  healthy: boolean;
+  healthy: boolean
 }
 
-class Status extends Component {
+class Status extends Component<{}, HealthResponse> {
+
+  constructor(props: {}) {
+    super(props);
+    this.state = {healthy: false};
+  }
 
   componentDidMount() {
     commonFetch<HealthResponse>(Endpoints.health_check, api.request(undefined, "GET"), res => {
-      if(res.Response.healthy) console.log("Server is healthy");
-      else console.log("Something is wrong with the server");
+      this.setState({
+        healthy: res.Response.healthy
+      })
     });
   }
 
   render() {
     return (
       <div className={Style.Status}>
-        Status
+        <div className={`${Style.StatusText} ${this.state.healthy ? Style.StatusHealthy : Style.StatusNotHealthy}`}>
+          {this.state.healthy ? 
+          'Server is healthy' :
+          'Server is not healthy'}
+        </div>
       </div>
     );
   }

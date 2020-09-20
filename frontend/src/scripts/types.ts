@@ -8,7 +8,7 @@ export type KeyValue<T, U> = {
     value: U
 };
 
-export type ApiMethod = "POST" | "GET";
+export type ApiMethod = "GET" | "POST" | "PUT" | "DELETE";
 
 export type ApiResult = "success" | "failure";
 
@@ -23,3 +23,10 @@ export type ApiResponse<T> = {
     Description: string,
     Response: T
 };
+
+export type Video = {
+    id: string,
+    name: string,
+    description: string,
+    dateUpdated?: Date
+}
