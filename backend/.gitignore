@@ -2,6 +2,9 @@
 /.idea
 /out
 /build
+/docker
+/uploads
+docker-compose.*
 *.iml
 *.ipr
 *.iws

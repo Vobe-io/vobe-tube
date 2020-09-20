@@ -1,3 +1,33 @@
 ### Health Check
-
 GET {{host}}/health_check
+
+### Get Videos
+GET {{host}}/video
+
+### Get Video
+GET {{host}}/video/2
+
+### Get Video Info
+GET {{host}}/video/814388c9-3dc0-48ef-9d66-46c6b0300556/info
+
+### Create Video
+POST {{host}}/video
+Content-Type: application/json
+
+{
+  "name": "Lost in space",
+  "description": "One of the best movies"
+}
+
+### Update Video
+PUT {{host}}/video
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Interstellar3",
+  "description": "I know there is only one interstellar movie"
+}
+
+### Delete Video
+DELETE {{host}}/video/4

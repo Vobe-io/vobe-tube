@@ -8,14 +8,21 @@ import bxHomeAlt from '@iconify/icons-bx/bx-home-alt';
 import bxHeart from '@iconify/icons-bx/bx-heart';
 import bxTimeFive from '@iconify/icons-bx/bx-time-five';
 import bxDownload from '@iconify/icons-bx/bx-download';
+import bxUpload from '@iconify/icons-bx/bx-upload';
 import bxSliderAlt from '@iconify/icons-bx/bx-slider-alt';
 import { Link, useLocation } from 'react-router-dom';
 
-class Sidebar extends Component {
+interface SidebarProps {
+    toggleUpload: () => void
+}
+
+class Sidebar extends Component<SidebarProps> {
     render() {
         return (
             <div className={Style.Sidebar}>
                 <Logo className={Style.Logo} />
+
+                {process.env.npm_package_version}
                 <div className={Style.SidebarContainer}>
                     <div className={Style.SidebarTop}>
                         <SidebarElement to="/" icon={
@@ -34,7 +41,9 @@ class Sidebar extends Component {
                     <div className={Style.SidebarBottom}>
                         <div className={Style.Placeholder}></div>
                         <div className={Style.Placeholder}></div>
-                        <div className={Style.Placeholder}></div>
+                        <div onClick={this.props.toggleUpload} className={Style.IconContainer}>
+                            <Icon className={Style.UploadButton} icon={bxUpload} />
+                        </div>
                         <SidebarElement to="/settings" icon={
                             <Icon icon={bxSliderAlt} />
                         } />

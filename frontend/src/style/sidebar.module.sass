@@ -3,11 +3,13 @@
 $width: 100px
 
 .Sidebar
+    position: sticky
+    top: 0
     display: flex
     flex-direction: column
     align-items: center
     min-width: $width
-    min-height: 100vh
+    height: 100vh
     color: $text-color-dark
     overflow: hidden
 
@@ -22,7 +24,7 @@ $width: 100px
     flex: 1
     width: 100%
     border-radius: 0 40px 40px 0
-    background-color: $secondary-color
+    background-color: $secondary-color 
 
 .SidebarTop
     display: flex
@@ -66,3 +68,7 @@ $width: 100px
 
 .Placeholder
     height: 0
+
+.UploadButton
+    color: green
+    cursor: pointer

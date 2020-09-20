@@ -8,11 +8,8 @@ const dev = {
 
 export const config = process.env.NODE_ENV === 'development' ? dev : prod;
 
-/*export enum APIResult {
-    SUCCESS = "success",
-    FAILURE = 'failure',
-}; */
-
 export const Endpoints = {
     health_check: config.API_URL + '/health_check',
+    video: config.API_URL + '/video',
+    thumbnail: config.API_URL + '/video/thumbnail',
 };

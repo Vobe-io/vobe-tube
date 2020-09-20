@@ -1,0 +1,103 @@
+@import 'color.sass'
+  
+.Upload
+  z-index: 1
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  background-color: rgba(0, 0, 0, 0.5)
+  background-blend-mode: multiply
+  width: 100vw
+  height: 100vh
+
+.Window
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+  width: 100%
+  max-width: 600px
+  height: 100%
+  max-height: 700px
+  background-color: $primary-color
+  border-radius: 15px
+  color: $text-color-light
+
+.UploadForm
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+
+.CancelButton
+  position: absolute
+  right: 0
+  top: 0
+  margin-top: 20px
+  margin-right: 20px
+  cursor: pointer
+
+.FileInput::-webkit-file-upload-button
+  visibility: hidden
+
+.FileInput
+  color: $text-color-dark
+  font-size: 15pt
+  background-color: $secondary-color
+  border-radius: 5px
+
+.InfoContainer
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 80%
+  height: 250px
+  overflow: hidden
+
+.TextArea
+  background-color: $secondary-color
+  border: none
+  border-radius: 5px
+  padding: 14px
+  outline: none
+  box-sizing: border-box
+  caret-color: $text-color-dark
+  color: $text-color-light !important
+  resize: none
+  font-size: 15pt
+
+.VideoTitle
+  border-radius: 5px 5px 0 0
+  width: 100%
+
+.SepLine
+  margin: -4px 14px -4px 14px
+  background: $text-color-dark
+  border-color: $invisible
+  width: calc(100% - 28px)
+  height: 6px
+
+.VideoDescription
+  border-radius: 0 0 5px 5px
+  width: 100%
+  height: 100%
+
+.UploadButton
+  color: $accent-color
+  font-size: 30pt
+  cursor: pointer
+  background-color: $invisible
+  border: none
+
+.FinishedStatus
+  font-size: 40pt
+  color: green
+
+.FailedStatus
+  font-size: 40pt
+  color: red
