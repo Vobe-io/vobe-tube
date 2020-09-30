@@ -1,6 +1,7 @@
 FROM node:latest AS builder
 WORKDIR /app
 COPY . .
+RUN ls
 RUN yarn install
 RUN yarn run build
 
