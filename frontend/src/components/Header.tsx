@@ -33,8 +33,7 @@ class Search extends Component {
 class Profile extends Component {
     render() {
         return (
-            <div></div>
-            /*<div className={Style.Profile}>
+            <div className={Style.Profile}>
                 <img className={Style.ProfilePic} alt="ProfilePicture" src={profilePic} />
                 <div className={Style.ProfileInfo}>
                     <Link to="/profile" className={Style.ProfileHeader}>
@@ -43,7 +42,7 @@ class Profile extends Component {
                     </Link>
                     <div className={Style.ProfileEmail}>jogi@vobe.io</div>
                 </div>
-            </div>*/
+            </div>
         );
     }
 }
