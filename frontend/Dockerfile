@@ -1,10 +1,10 @@
-FROM node:14.11.0-alpine3.10 AS builder
+FROM node:latest AS builder
 WORKDIR /app
 COPY . .
 RUN yarn install
 RUN yarn run build
 
-FROM node:14.11.0-alpine3.10
+FROM node:latest
 RUN yarn global add serve
 WORKDIR /app
 COPY --from=builder /app/build .
