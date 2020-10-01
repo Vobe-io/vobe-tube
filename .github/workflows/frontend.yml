@@ -21,11 +21,11 @@ jobs:
       run:
         working-directory: ./frontend
     steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2 
+        
       - name: Check folder
         run: echo ::set-env name=TAG_NAME::$(ls)
-        
-      - name: Check out the repo
-        uses: actions/checkout@v2
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master
