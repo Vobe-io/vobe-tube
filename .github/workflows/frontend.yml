@@ -13,9 +13,6 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'
-defaults:
-  run:
-    working-directory: ./frontend
 jobs:
   push_to_registry:
     name: Push Docker image to GitHub Packages
