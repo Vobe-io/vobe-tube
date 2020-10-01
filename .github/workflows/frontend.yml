@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check folder
-        run: ls
+        run: echo ::set-env name=TAG_NAME::$(ls)
         
       - name: Check out the repo
         uses: actions/checkout@v2
