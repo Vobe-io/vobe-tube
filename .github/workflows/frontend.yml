@@ -46,4 +46,4 @@ jobs:
           file: ./frontend/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: vobe-io/vobe-tube/vobe-tube-frontend:latest
+          tags: vobe-tube-frontend:0.1.0
