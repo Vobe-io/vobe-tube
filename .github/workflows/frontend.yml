@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check folder
-        run: ls -al
+        run: echo '::set-output name=SELECTED_COLOR::green'
         
       - name: Check out the repo
         uses: actions/checkout@v2
