@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2 
         
       - name: Check folder
-        run: echo ::set-env name=TAG_NAME::$(ls)
+        run: echo "Test"
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master
