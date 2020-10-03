@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2 
         
       - name: Prepare
-        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
+        run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') | echo ${{ secrets.CR_PAT }}
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master
