@@ -26,6 +26,8 @@ jobs:
         
       - name: Prepare
         run: echo ::set-env name=IMAGE_REPOSITORY::$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')
+      - name: Test
+        run: echo ${{ github.repository_owner }}
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@master
